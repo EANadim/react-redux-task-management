@@ -11,3 +11,89 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.body-content{
+  margin:30px;
+}
+.button {
+  border: none;
+  color: white;
+  padding: 6px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius : 6px;
+  background-color: #E6DFDD;
+}
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type=button] {
+  background-color: #54769d;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 4px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+input[type=submit] {
+  background-color: #54769d;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 4px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color:#54769d;
+}
+.form-div {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  width: 50%;
+  border: 1px solid black;
+}
+.header {
+  overflow: hidden;
+  background-color: #54769d;
+  padding: 20px 10px;
+}
+.navbar-brand{
+  float: left;
+  line-height: 20px;
+  cursor: pointer;
+}
+.btn-group .button-nav {
+  background-color: #2e4c6d; 
+  border: 1px solid #54769d;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+}
+.btn-group{
+  float: right;
+}
+
+.btn-group .button-nav:not(:last-child) {
+  border-right: none; /* Prevent double borders */
+}
+
+.btn-group .button-nav:hover {
+  background-color: #263444;
+}
