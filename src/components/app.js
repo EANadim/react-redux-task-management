@@ -19,7 +19,7 @@ import {
 export default function App(props) {
     return (
         <div>
-            <ToastContainer className="toast-container" />
+            <ToastContainer />
             <Nav />
             <div className="body-content">
                 <Switch>
