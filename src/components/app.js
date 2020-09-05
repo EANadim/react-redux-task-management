@@ -9,6 +9,8 @@ import EditTask from './task/editTask';
 import AddMember from './member/addMember';
 import Member from './member/member';
 import EditMember from './member/editMember';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import {
     Switch,
     Route,
@@ -17,6 +19,7 @@ import {
 export default function App(props) {
     return (
         <div>
+            <ToastContainer className="toast-container" />
             <Nav />
             <div className="body-content">
                 <Switch>

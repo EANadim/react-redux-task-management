@@ -3,11 +3,14 @@ import { connect } from 'react-redux';
 import { createMember } from '../../actions/memberAction';
 import { bindActionCreators } from 'redux'
 import { useHistory } from "react-router-dom";
+import { toast } from 'react-toastify';
 
 function AddMember(props) {
     const [name, setName] = useState("");
 
     const history = useHistory();
+
+    const notify = () => toast("Member registered");
 
     const nameChangeHandler = (event) => {
         setName(event.target.value);
@@ -18,6 +21,7 @@ function AddMember(props) {
             let member = {
                 name: name
             }
+            notify();
             props.createMember(member);
             history.push("/members");
         }

@@ -4,10 +4,13 @@ import { useHistory } from "react-router-dom";
 import { editMember } from '../../actions/memberAction';
 import { bindActionCreators } from 'redux'
 import member from './member';
+import { toast } from 'react-toastify';
 
 const EditMember = (props) => {
     const [name, setName] = useState(props.member.name);
     const history = useHistory();
+
+    const notify = () => toast("Member updated");
 
     const editMemberFormSubmitHandler = (event) => {
         event.preventDefault();
@@ -16,6 +19,7 @@ const EditMember = (props) => {
                 id: props.member.id,
                 name: name,
             }
+            notify();
             props.editMember(data);
             history.push("/members");
         }

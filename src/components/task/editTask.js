@@ -4,6 +4,7 @@ import { useHistory } from "react-router-dom";
 import { editTask } from '../../actions/taskAction';
 import { bindActionCreators } from 'redux'
 import task from './task';
+import { toast } from 'react-toastify';
 
 export function EditTask(props) {
   const [title, setTitle] = useState(props.task.title);
@@ -11,7 +12,7 @@ export function EditTask(props) {
   const [memberId, setMemberId] = useState(props.member.id);
 
   const history = useHistory();
-
+  const notify = () => toast("Task updated");
   const editTaskFormSubmitHandler = (event) => {
     event.preventDefault();
     if (title && description, memberId) {
@@ -21,6 +22,7 @@ export function EditTask(props) {
         description: description,
         member_id: parseInt(memberId)
       }
+      notify();
       props.editTask(data);
       history.push("/tasks");
     }

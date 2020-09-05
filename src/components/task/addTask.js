@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { createTask } from '../../actions/taskAction';
 import { bindActionCreators } from 'redux'
 import { useHistory } from "react-router-dom";
+import { toast } from 'react-toastify';
 
 function AddTask(props) {
   const [title, setTitle] = useState("");
@@ -10,6 +11,8 @@ function AddTask(props) {
   const [memberId, setmemberId] = useState("");
 
   const history = useHistory();
+
+  const notify = () => toast("Task registered");
 
   const titleChangeHandler = (event) => {
     setTitle(event.target.value);
@@ -28,6 +31,7 @@ function AddTask(props) {
         description: description,
         member_id: parseInt(memberId)
       }
+      notify();
       props.createTask(task);
       history.push("/tasks");
     }
